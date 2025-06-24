@@ -1,3 +1,23 @@
+
+NOTE: Forked from https://github.com/ijprest/keyboard-layout-editor only to make installation more standardized for node.js.
+
+On Mac OS X, only dependencies needed are `homebrew`, `node`, and `fontforge` (and make if xcode command line tools havent been installed via `xcode-select --install`):
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install node
+brew install fontforge
+```
+
+Then just npm install & npm run dev
+```
+npm install
+npm run build
+npm run dev
+```
+
+This will start the webapp at localhost:8080 and you can go to http://localhost:8080/kb.html.
+
+
 keyboard-layout-editor
 ----------------------
 [Keyboard-layout-editor.com](https://www.keyboard-layout-editor.com) (KLE) is a

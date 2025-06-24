@@ -1,0 +1,18 @@
+{
+    "dependencies": {
+        "bower": "1.8.14",
+        "grunt-cli": "1.5.0",
+        "protractor": "7.0.0",
+        "jasmine": "5.8.0",
+        "uglify-js": "3.19.3",
+        "stylus": "0.64.0",
+        "jison": "0.4.18",
+        "git-utils": "5.7.3",
+        "http-server": "14.1.1"
+    },
+    "scripts": {
+        "postinstall": "bower install && cd bower_components/angular-ui-bootstrap && npm install && grunt before-test after-test && cd ../angular-ui-utils && npm install && grunt build",
+        "build": "make && make fonts",
+        "dev": "http-server"
+    }
+}
