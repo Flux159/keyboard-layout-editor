@@ -16,7 +16,7 @@ all: js_files css_files bower_copy
 js_files: js/jsonl.min.js js/cssparser.min.js
 js/%.min.js: js/%.js
 	$(call mkdir,$(dir $@))
-	uglifyjs "$^" > "$@"
+	./node_modules/.bin/uglifyjs "$^" > "$@"
 js/%.js: %.y
 	$(call mkdir,$(dir $@))
 	jison "$^" -o "$@"
